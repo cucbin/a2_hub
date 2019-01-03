@@ -7,5 +7,6 @@ import android.support.v4.app.Fragment
  * <p>Date: 1/3/19</p>
  */
 abstract class AbstractBaseFragment : Fragment() {
+
     
 }
