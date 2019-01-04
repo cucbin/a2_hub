@@ -22,7 +22,7 @@ temp_out="$base_dir/djinni-output-temp"
 in="$base_dir/example.djinni"
 
 core_dir="$base_dir/../core/src/main/"
-cpp_out="$core_dir/cpp/gen"
+cpp_out="$core_dir/cpp/header"
 jni_out="$core_dir/jni"
 objc_out="$base_dir/generated-src/objc"
 java_out="$core_dir/java/io/ioprint/core"
@@ -63,7 +63,7 @@ fi
     --cpp-namespace textsort \
     --ident-cpp-enum-type foo_bar \
     \
-    --jni-include-cpp-prefix ../cpp/gen/ \
+    --jni-include-cpp-prefix ../cpp/header/ \
     --jni-out "$temp_out/jni" \
     \
     --objc-out "$temp_out/objc" \
