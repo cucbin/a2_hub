@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "../cpp/gen/sort_items.hpp"
+#include "../cpp/header/sort_items.hpp"
 #include "djinni_support.hpp"
 
 namespace djinni_generated {

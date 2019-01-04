@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "../cpp/gen/textbox_listener.hpp"
+#include "../cpp/header/textbox_listener.hpp"
 #include "djinni_support.hpp"
 
 namespace djinni_generated {

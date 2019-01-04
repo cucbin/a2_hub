@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "../cpp/gen/item_list.hpp"
+#include "../cpp/header/item_list.hpp"
 #include "djinni_support.hpp"
 
 namespace djinni_generated {

@@ -8,5 +8,7 @@ import android.support.v7.app.AppCompatActivity
  */
 abstract class AbstractBaseActivity : AppCompatActivity() {
 
-
+    companion object {
+        private val TAG = "AbstractBaseActivity"
+    }
 }

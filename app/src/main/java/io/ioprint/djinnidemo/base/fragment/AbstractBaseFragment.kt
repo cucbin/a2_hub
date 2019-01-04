@@ -8,5 +8,8 @@ import android.support.v4.app.Fragment
  */
 abstract class AbstractBaseFragment : Fragment() {
 
-    
+
+    companion object {
+        private val TAG = "AbstractBaseFragment"
+    }
 }

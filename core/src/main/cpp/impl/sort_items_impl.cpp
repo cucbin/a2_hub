@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <random>
 
-#include "../gen/item_list.hpp"
+#include "../header/item_list.hpp"
 #include "sort_items_impl.hpp"
 
 namespace textsort {

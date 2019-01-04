@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../gen/sort_items.hpp"
-#include "../gen/textbox_listener.hpp"
+#include "../header/sort_items.hpp"
+#include "../header/textbox_listener.hpp"
 
 namespace textsort {
 
