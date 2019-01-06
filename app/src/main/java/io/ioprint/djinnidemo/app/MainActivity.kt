@@ -16,9 +16,4 @@ class MainActivity : AbstractBaseActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    companion object {
-        init {
-            System.loadLibrary("core")
-        }
-    }
 }
