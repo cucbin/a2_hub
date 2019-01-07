@@ -9,7 +9,7 @@ import io.ioprint.djinnidemo.R
 import io.ioprint.djinnidemo.base.activity.AbstractBaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AbstractBaseActivity() {
+class HomeActivity : AbstractBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

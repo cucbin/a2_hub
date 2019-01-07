@@ -6,20 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import io.ioprint.djinnidemo.R
 import io.ioprint.djinnidemo.base.fragment.AbstractBaseFragment
-import kotlinx.android.synthetic.main.sample_fragment.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
  * @author  bill.shen
  * <p>Date: 1/4/19</p>
  */
-class SampleFragment : AbstractBaseFragment(),ISampleView {
+class HomeFragment : AbstractBaseFragment(),IHomeView {
 
     private val presenter by lazy  {
-        SamplePresenter(this)
+        HomePresenter(this)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.sample_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,7 +31,7 @@ class SampleFragment : AbstractBaseFragment(),ISampleView {
     }
 
     companion object {
-        private val TAG = "SampleFragment"
+        private val TAG = "HomeFragment"
     }
 
 }

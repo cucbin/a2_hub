@@ -9,7 +9,7 @@ import io.ioprint.core.TextboxListener
  * @author  bill.shen
  * <p>Date: 1/4/19</p>
  */
-class SamplePresenter(private val view: ISampleView):TextboxListener {
+class HomePresenter(private val view: IHomeView):TextboxListener {
 
     private var sortItems: SortItems? = null
 
@@ -28,6 +28,6 @@ class SamplePresenter(private val view: ISampleView):TextboxListener {
     }
 
     companion object {
-        private val TAG = "SamplePresenter"
+        private val TAG = "HomePresenter"
     }
 }
