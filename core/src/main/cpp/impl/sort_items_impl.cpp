@@ -36,10 +36,4 @@ void SortItemsImpl::sort(sort_order order, const ItemList & items) {
     this->m_listener->update(error_code::SUCCESS, ItemList(lines));
 }
 
-ItemList SortItems::run_sort(const ItemList & items) {
-    auto lines = items.items;
-    std::sort(lines.begin(), lines.end(), std::less<std::string>());
-    return ItemList(lines);
-}
-
 }

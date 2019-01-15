@@ -14,12 +14,6 @@ public interface SortItems {
         return CppProxy.createWithListener(listener);
     }
 
-    /** For the localhost / command-line demo */
-    public static ItemList runSort(ItemList items)
-    {
-        return CppProxy.runSort(items);
-    }
-
     static final class CppProxy implements SortItems
     {
         private final long nativeRef;
@@ -52,7 +46,5 @@ public interface SortItems {
         private native void native_sort(long _nativeRef, SortOrder order, ItemList items);
 
         public static native SortItems createWithListener(TextboxListener listener);
-
-        public static native ItemList runSort(ItemList items);
     }
 }
