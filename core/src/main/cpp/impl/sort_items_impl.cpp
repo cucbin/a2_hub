@@ -3,6 +3,7 @@
 
 #include "../header/item_list.hpp"
 #include "sort_items_impl.hpp"
+#include "../header/error_code.hpp"
 
 namespace textsort {
 
@@ -32,7 +33,7 @@ void SortItemsImpl::sort(sort_order order, const ItemList & items) {
     }
 
     // Pass result to client interface
-    this->m_listener->update(ItemList(lines));
+    this->m_listener->update(error_code::SUCCESS, ItemList(lines));
 }
 
 ItemList SortItems::run_sort(const ItemList & items) {

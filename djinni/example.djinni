@@ -8,6 +8,11 @@ sort_order = enum {
     random;
 }
 
+error_code = enum {
+    success;
+    error;
+}
+
 sort_items = interface +c {
     # For the iOS / Android demo
     sort(order: sort_order, items: item_list);
@@ -18,5 +23,5 @@ sort_items = interface +c {
 }
 
 textbox_listener = interface +j +o {
-    update(items: item_list);
+    update(error_code:error_code, items: item_list);
 }

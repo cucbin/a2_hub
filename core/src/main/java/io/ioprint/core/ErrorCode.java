@@ -3,6 +3,8 @@
 
 package io.ioprint.core;
 
-public interface TextboxListener {
-    public void update(ErrorCode errorCode, ItemList items);
+public enum ErrorCode {
+    SUCCESS,
+    ERROR,
+    ;
 }

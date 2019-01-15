@@ -2,6 +2,7 @@
 
 #include "../header/sort_items.hpp"
 #include "../header/textbox_listener.hpp"
+#include "../header/sort_order.hpp"
 
 namespace textsort {
 

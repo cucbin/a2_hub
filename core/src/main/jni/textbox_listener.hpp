@@ -33,14 +33,14 @@ private:
         JavaProxy(JniType j);
         ~JavaProxy();
 
-        void update(const ::textsort::ItemList & items) override;
+        void update(::textsort::error_code error_code, const ::textsort::ItemList & items) override;
 
     private:
         friend ::djinni::JniInterface<::textsort::TextboxListener, ::djinni_generated::TextboxListener>;
     };
 
     const ::djinni::GlobalRef<jclass> clazz { ::djinni::jniFindClass("io/ioprint/core/TextboxListener") };
-    const jmethodID method_update { ::djinni::jniGetMethodID(clazz.get(), "update", "(Lio/ioprint/core/ItemList;)V") };
+    const jmethodID method_update { ::djinni::jniGetMethodID(clazz.get(), "update", "(Lio/ioprint/core/ErrorCode;Lio/ioprint/core/ItemList;)V") };
 };
 
 }  // namespace djinni_generated

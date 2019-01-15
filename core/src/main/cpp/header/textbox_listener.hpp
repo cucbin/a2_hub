@@ -5,13 +5,14 @@
 
 namespace textsort {
 
+enum class error_code;
 struct ItemList;
 
 class TextboxListener {
 public:
     virtual ~TextboxListener() {}
 
-    virtual void update(const ItemList & items) = 0;
+    virtual void update(error_code error_code, const ItemList & items) = 0;
 };
 
 }  // namespace textsort

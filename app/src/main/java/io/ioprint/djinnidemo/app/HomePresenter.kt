@@ -1,9 +1,6 @@
 package io.ioprint.djinnidemo.app
 
-import io.ioprint.core.ItemList
-import io.ioprint.core.SortItems
-import io.ioprint.core.SortOrder
-import io.ioprint.core.TextboxListener
+import io.ioprint.core.*
 
 /**
  * @author  bill.shen
@@ -22,7 +19,7 @@ class HomePresenter(private val view: IHomeView):TextboxListener {
         sortItems?.sort(SortOrder.ASCENDING, itemList);
     }
 
-    override fun update(items: ItemList?) {
+    override fun update(errorCode: ErrorCode, items: ItemList?) {
         val content = "the order:".plus(items.toString())
         view.showText(content)
     }

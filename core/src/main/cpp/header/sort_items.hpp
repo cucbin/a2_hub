@@ -4,7 +4,6 @@
 #pragma once
 
 #include <memory>
-#include "sort_order.hpp"
 
 namespace textsort {
 
