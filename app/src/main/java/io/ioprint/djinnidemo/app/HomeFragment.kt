@@ -33,5 +33,4 @@ class HomeFragment : AbstractBaseFragment(),IHomeView {
     companion object {
         private val TAG = "HomeFragment"
     }
-
 }

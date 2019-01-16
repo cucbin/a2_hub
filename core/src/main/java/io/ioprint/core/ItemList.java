@@ -21,9 +21,7 @@ public final class ItemList {
 
     @Override
     public String toString() {
-        return "ItemList{" +
-                "mItems=" + mItems +
-        "}";
+        return "ItemList{" + mItems + "}";
     }
 
 }
