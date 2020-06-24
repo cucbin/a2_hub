@@ -6,21 +6,15 @@
 cmake_minimum_required(VERSION 3.4.1)
 project(core)
 
-# Android compile option with cpu
-set(PLATFORM android)
-set(CMAKE_ANDROID_API 19)
-
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -latomic -lm -lz")
-
-set(CORE_PATH ${PROJECT_SOURCE_DIR}/../)
 
 # Adds definitions to the compiler command line for targets in the current directory
 #add_definitions(-O3 -pthread -fexceptions -frtti)
 
 add_library( core SHARED )
 
-add_subdirectory (${CORE_PATH}/tools/support-lib/jni djinni)
+add_subdirectory (${PROJECT_SOURCE_DIR}/../tools/support-lib/jni djinni)
 add_subdirectory (${PROJECT_SOURCE_DIR}/src/main core_jni)
 add_subdirectory (${PROJECT_SOURCE_DIR}/src/main/cpp core_impl)
 
