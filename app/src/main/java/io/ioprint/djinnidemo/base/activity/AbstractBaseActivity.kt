@@ -1,6 +1,7 @@
 package io.ioprint.djinnidemo.base.activity
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+
 
 /**
  * @author  bill.shen
