@@ -1,0 +1,69 @@
+.gitttree-tree-element {
+  padding: 2px 15px 2px 0px;
+  display: flex;
+  height: 24px;
+  align-items: center;
+  width: max-content;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gitttree-tree-element:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.gitttree-child-list {
+  list-style-type: none;
+  padding: 0px 0px 0px 20px;
+}
+
+.gitttree-tree-icon {
+  width: 16px;
+  text-align: center;
+  margin-right: 2px;
+  padding-bottom: 2px;
+}
+
+.gitttree-file-icon {
+  width: 22px;
+  text-align: left;
+}
+
+.gitttree-file-icon i {
+  font-style: normal;
+}
+
+.gitttree-item-name {
+  width: max-content;
+}
+
+.gitttree-arrow {
+  font-style: normal;
+}
+
+.gitttree-full-width-row {
+  position: absolute;
+  height: 24px;
+  width: 100%;
+  left: 0px;
+  z-index: 5;
+  opacity: 25%;
+  background: transparent;
+  transition: 0.2s background;
+  box-sizing: border-box;
+}
+
+.gitttree-full-width-row:hover {
+  background: #6464ff;
+  cursor: pointer;
+}
+
+.gitttree-full-width-row:active {
+  background: blue;
+}
+
+.gitttree-active-row {
+  border: 3px solid black;
+  background: darkslategrey;
+}

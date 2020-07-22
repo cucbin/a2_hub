@@ -1,0 +1,13 @@
+.gitttree-toggler {
+  position: fixed;
+  padding: 4px 8px;
+  top: 30%;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  border-radius: 0px 0px 4px 4px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0px 0px 5px #000000d9;
+  color: white;
+  background: rgb(41,41,97);
+}
