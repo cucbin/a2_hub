@@ -1,0 +1,42 @@
+import os ;
+
+
+
+local ANDROID_NDK_HOME = [ os.environ ANDROID_NDK_HOME ] ;
+local ANDROID_API = [ os.environ ANDROID_API ] ;
+local ANDROID_TOOLCHAINS_BIN = [ os.environ ANDROID_TOOLCHAINS_BIN ] ;
+
+
+using clang : armv7a :
+    $(ANDROID_TOOLCHAINS_BIN)/clang++ :
+    <archiver>$(ANDROID_TOOLCHAINS_BIN)/llvm-ar
+    <ranlib>":"
+    <compileflags>--sysroot=$(ANDROID_NDK_HOME)/sysroot
+    <compileflags>-isystem
+    <compileflags>$(ANDROID_NDK_HOME)/sysroot/usr/include/arm-linux-androideabi
+    <compileflags>-I$(ANDROID_NDK_HOME)/sources/cxx-stl/llvm-libc++/include
+    <compileflags>-I$(ANDROID_NDK_HOME)/sources/cxx-stl/llvm-libc++abi/include
+    <compileflags>-I$(ANDROID_NDK_HOME)/sources/android/support/include
+    <compileflags>-DANDROID
+    <compileflags>--target=armv7a-none-linux-androideabi
+    <compileflags>-std=c++14
+    <compileflags>-fexceptions
+    <compileflags>-v
+    ;
+
+using clang : aarch64 :
+    $(ANDROID_TOOLCHAINS_BIN)/clang++ :
+    <archiver>$(ANDROID_TOOLCHAINS_BIN)/llvm-ar
+    <ranlib>":"
+    <compileflags>--sysroot=$(ANDROID_NDK_HOME)/sysroot
+    <compileflags>-isystem
+    <compileflags>$(ANDROID_NDK_HOME)/sysroot/usr/include/aarch64-linux-android
+    <compileflags>-I$(ANDROID_NDK_HOME)/sources/cxx-stl/llvm-libc++/include
+    <compileflags>-I$(ANDROID_NDK_HOME)/sources/cxx-stl/llvm-libc++abi/include
+    <compileflags>-I$(ANDROID_NDK_HOME)/sources/android/support/include
+    <compileflags>-DANDROID
+    <compileflags>--target=aarch64-none-linux-android
+    <compileflags>-std=c++14
+    <compileflags>-fexceptions
+    <compileflags>-v
+    ;
